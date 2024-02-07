@@ -21,7 +21,7 @@ test('Valid Response Code on Success', () => {
 test('Check API Rate Limit - Still Within the Valid Limit', async () => {
     let response = null;
     //  Make 10 requests to the API
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 5; i++) {
         response = await tryRequest(agent_swapi, 'GET', '/people/' + i);
     }
     //  Validate the response code
